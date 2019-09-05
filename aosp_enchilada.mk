@@ -21,10 +21,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from enchilada device
 $(call inherit-product, device/oneplus/enchilada/device.mk)
 
-# Inherit some common Viper OS stuff.
-$(call inherit-product, vendor/viper/config/common_full_phone.mk)
+# Inherit some common AEX stuff.
+$(call inherit-product, vendor/aosp/common.mk)
 
-PRODUCT_NAME := viper_enchilada
+# Bootanimation
+TARGET_BOOT_ANIMATION_RES := 2280
+
+PRODUCT_NAME := aosp_enchilada
 PRODUCT_DEVICE := enchilada
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
